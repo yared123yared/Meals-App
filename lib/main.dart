@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
 
         )
       ),
-      home: CategoryScreen(),
+
       initialRoute:'/',
       routes: {
         '/' : (ctx)=>CategoryScreen(),
@@ -56,5 +56,6 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Text('Navigation Time!'),
       ),
     );
+
   }
 }
