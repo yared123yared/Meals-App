@@ -1,9 +1,9 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:shopping_app/category_item.dart';
+import 'file:///C:/Users/yared/AndroidStudioProjects/flutter_app4/shopping_app/lib/Widget/category_item.dart';
 
-import 'dummy_data.dart';
+import '../dummy_data.dart';
 
 class CategoryScreen extends StatelessWidget {
   @override
