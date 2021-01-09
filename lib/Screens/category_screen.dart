@@ -8,7 +8,7 @@ import '../dummy_data.dart';
 class CategoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body:GridView(
+    return GridView(
       padding: EdgeInsets.all(25),
       children: DUMMY_CATEGORIES.map((catData) => CategoryItem(catData.id ,catData.title, catData.color)).toList(),
       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
@@ -17,7 +17,7 @@ class CategoryScreen extends StatelessWidget {
         crossAxisSpacing: 20,
         mainAxisSpacing: 20,
 
-      ),
+
 
     ) ,) ;
   }
