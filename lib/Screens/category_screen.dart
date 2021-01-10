@@ -1,7 +1,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/yared/AndroidStudioProjects/flutter_app4/shopping_app/lib/Widget/category_item.dart';
+import '../Widget/category_item.dart';
 
 import '../dummy_data.dart';
 
