@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_app/Models/meal.dart';
 
 import 'category_screen.dart';
 import 'favorites_screen.dart';
@@ -6,15 +7,24 @@ import 'filters_screen.dart';
 import 'main_drawer.dart';
 
 class TabsScreen extends StatefulWidget {
+  final List<Meal> favoritMeals;
+
+  TabsScreen( this.favoritMeals);
+
+
   @override
   _TabsScreenState createState() => _TabsScreenState();
 }
 
 class _TabsScreenState extends State<TabsScreen> {
-  List<Widget> _pages=[
-    CategoryScreen(),
-    FavoriteScreen()
-  ];
+  List<Widget> _pages;
+  @override
+  initState(){
+    this._pages=[
+      CategoryScreen(),
+      FavoriteScreen(widget.favoritMeals)
+    ];
+  }
   int _selectedPageIndex = 0 ;
 
   void _selectPage(int index) {
