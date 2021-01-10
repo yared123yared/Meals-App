@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'category_screen.dart';
 import 'favorites_screen.dart';
+import 'filters_screen.dart';
 
 class TabsScreen extends StatefulWidget {
   @override
@@ -33,11 +34,9 @@ class _TabsScreenState extends State<TabsScreen> {
 
     return value;
   }
-  Widget getListTile(String text, Icon icon){
+  Widget getListTile(String text, Icon icon, Function tapHandler){
     return ListTile(
-      onTap: (){
-
-      },
+      onTap: tapHandler,
       leading:icon,
       title: Text('$text',style: TextStyle(
           fontFamily: 'RobotoCondensed',
@@ -72,8 +71,12 @@ class _TabsScreenState extends State<TabsScreen> {
 
             ),
             SizedBox(height:20,),
-            getListTile('Meals',Icon(Icons.restaurant,size: 26,),),
-            getListTile('Filter',Icon(Icons.filter_sharp,size: 26,),),
+            getListTile('Meals',Icon(Icons.restaurant,size: 26,),(){
+              Navigator.of(context).pushNamed('/');
+            }),
+            getListTile('Filter',Icon(Icons.filter_sharp,size: 26),(){
+              Navigator.of(context).pushNamed(FiltersScreen.routeName);
+            }),
 
           ],
         ),
